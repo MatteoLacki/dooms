@@ -1,46 +1,25 @@
 [build-system]
-requires = ["setuptools >= 64", "wheel"]
+requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name="dooms"
-version="0.0.1"
-description="SHORT DESC."
-readme="README.md"
-authors=[
-    {name="MatteoLacki",email="matteo.lacki@gmail.com"},
+name = "dooms"
+version = "0.1.0"
+description = "ANOVA and Tukey post-hoc analysis for long-format proteomics data."
+readme = "README.md"
+authors = [
+    {name = "Matteo Lacki", email = "matteo.lacki@gmail.com"},
 ]
-requires-python = ">=3.6"
-# dependencies = [
-#     "click",
-# ]
-
-# [project.optional-dependencies]
-# dev = [
-#     "twine",
-#     "pytest",
-# ]
-
+requires-python = ">=3.10"
+dependencies = [
+    "numba",
+    "numpy",
+    "pandas",
+    "scipy",
+]
 
 [project.scripts]
-example_shell_script = "dooms.cli.example_shell_script:example_shell_script"
-
-[project.urls]
-homepage="https://github.com/MatteoLacki/dooms.git"
-repository="https://github.com/MatteoLacki/dooms.git"
-
-[tool.uv]
-reinstall-package = ["dooms"]
-
-# [tool.pytest.ini_options]
-# testpaths = ["tests"]
-
+dooms = "dooms.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-# [tool.setuptools]
-# include-package-data = true
-
-# [tool.setuptools.package-data]
-# dooms = ["data/*.csv"]
