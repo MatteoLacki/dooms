@@ -3,3 +3,5 @@ __pycache__/
 *.py[cod]
 *egg-info
 build
+ve_dooms/
+dooms_outputs/
