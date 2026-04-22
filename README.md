@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="pics/logo.png" alt="dooms logo" width="160">
+</p>
+
 # dooms
 
 ANOVA and Tukey post-hoc analysis for long-format proteomics data.
